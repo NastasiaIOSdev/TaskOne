@@ -9,15 +9,20 @@ import UIKit
 
 class GuessViewController: UIViewController {
     
+    var score = 1
+    
     // MARK: - Outlets
     
     @IBOutlet weak var guessLabel: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
     @IBOutlet weak var guessMessageLabel: UILabel!
-    
+    @IBOutlet weak var attemptsLabel: UILabel!
+    @IBOutlet weak var scoreAttemptsLabel: UILabel!
     // MARK: - Actions
     
     @IBAction func guessButton(_ sender: Any) {
+        score = score + 1
+        scoreAttemptsLabel.text = String(score)
         let answer = arc4random_uniform(101)
         let userInput = guessTextField.text
         let inputAsInt = Int(userInput!)
