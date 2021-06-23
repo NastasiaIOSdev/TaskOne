@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUq-F2-bIh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="8Al-m6-Kjf">
+            <objects>
+                <viewController id="zUq-F2-bIh" customClass="SplashScreenViewController" customModule="TaskOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qxy-fY-Avo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrionInLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uNH-f9-n4v">
+                                <rect key="frame" x="30" y="271" width="354" height="354"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uNH-f9-n4v" secondAttribute="height" multiplier="1:1" id="V5c-Cq-6Od"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bJR-UW-Lwb"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uNH-f9-n4v" firstAttribute="centerX" secondItem="qxy-fY-Avo" secondAttribute="centerX" id="RH5-vV-mLD"/>
+                            <constraint firstItem="uNH-f9-n4v" firstAttribute="centerY" secondItem="qxy-fY-Avo" secondAttribute="centerY" id="Xbx-kL-2Am"/>
+                            <constraint firstItem="bJR-UW-Lwb" firstAttribute="trailing" secondItem="uNH-f9-n4v" secondAttribute="trailing" constant="30" id="dOd-cg-xr0"/>
+                            <constraint firstItem="uNH-f9-n4v" firstAttribute="leading" secondItem="bJR-UW-Lwb" secondAttribute="leading" constant="30" id="sz1-M9-PAQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splashImageView" destination="uNH-f9-n4v" id="fXW-TT-nlY"/>
+                        <segue destination="Wvh-Be-lau" kind="presentation" identifier="splash" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="GUg-NX-jmx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hph-5p-rdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628" y="101"/>
+        </scene>
+        <!--Guess the Number-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GuessViewController" customModule="TaskOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CxX-6F-6pm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="eaf-hg-2Xz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="g20-Pr-BSv">
+                                <rect key="frame" x="20" y="140" width="374" height="472"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from 0 to 100:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9s-lg-7a8">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Jey-pz-ypl">
+                                        <rect key="frame" x="0.0" y="127.5" width="374" height="344.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KQe-1G-R48">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="210"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZa-lb-Mfx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="bsS-7m-D8w"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y01-Ie-S6y">
+                                                        <rect key="frame" x="0.0" y="80" width="374" height="50"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                                        <state key="normal" title="GUESS" backgroundImage="Rectangle">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="guessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuv-2U-3qt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSk-gQ-UYi">
+                                                        <rect key="frame" x="0.0" y="160" width="374" height="50"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                                        <state key="normal" title="TRY AGAIN" backgroundImage="Rectangle">
+                                                            <color key="titleColor" red="0.54636610029999999" green="0.92517081590000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="tryAgainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nsM-fy-Lwx"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your number is..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-pP-LAp">
+                                                <rect key="frame" x="0.0" y="310" width="374" height="34.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                                <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N0a-wx-3iw"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g20-Pr-BSv" firstAttribute="top" secondItem="N0a-wx-3iw" secondAttribute="top" id="4CR-o3-MBV"/>
+                            <constraint firstItem="eaf-hg-2Xz" firstAttribute="trailing" secondItem="N0a-wx-3iw" secondAttribute="trailing" id="cdk-fb-qSE"/>
+                            <constraint firstAttribute="bottom" secondItem="eaf-hg-2Xz" secondAttribute="bottom" id="hfp-Jc-Cf2"/>
+                            <constraint firstItem="N0a-wx-3iw" firstAttribute="trailing" secondItem="g20-Pr-BSv" secondAttribute="trailing" constant="20" id="jM6-Qm-XXR"/>
+                            <constraint firstItem="eaf-hg-2Xz" firstAttribute="top" secondItem="CxX-6F-6pm" secondAttribute="top" id="oDO-d6-e0f"/>
+                            <constraint firstItem="eaf-hg-2Xz" firstAttribute="leading" secondItem="N0a-wx-3iw" secondAttribute="leading" id="qro-d8-MeW"/>
+                            <constraint firstItem="g20-Pr-BSv" firstAttribute="leading" secondItem="N0a-wx-3iw" secondAttribute="leading" constant="20" id="uNr-0p-LcG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Guess the Number" id="wuT-10-v11"/>
+                    <connections>
+                        <outlet property="guessLabel" destination="F9s-lg-7a8" id="dAL-Cm-NoS"/>
+                        <outlet property="guessMessageLabel" destination="sgg-pP-LAp" id="F8q-zf-Jt0"/>
+                        <outlet property="guessTextField" destination="TZa-lb-Mfx" id="TXL-fZ-fe7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110.144927536232" y="99.776785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yjt-cR-e5R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wvh-Be-lau" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wWp-P7-qVt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Opi-5P-4QJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIV-YK-7eg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.00000000000003" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="OrionInLogo" width="900" height="900"/>
+        <image name="Rectangle" width="322" height="68"/>
+        <image name="sky" width="340" height="413"/>
+    </resources>
+</document>
