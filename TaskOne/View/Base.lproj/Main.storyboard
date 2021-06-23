@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -155,7 +156,13 @@
                             <constraint firstItem="g20-Pr-BSv" firstAttribute="leading" secondItem="N0a-wx-3iw" secondAttribute="leading" constant="20" id="uNr-0p-LcG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Guess the Number" id="wuT-10-v11"/>
+                    <navigationItem key="navigationItem" title="Guess the Number" id="wuT-10-v11">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="F5H-m6-l9K">
+                            <connections>
+                                <segue destination="bnL-18-5bd" kind="show" id="Jl2-PJ-VTm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="attemptsLabel" destination="765-IF-tvu" id="7KU-US-LX1"/>
                         <outlet property="guessLabel" destination="F9s-lg-7a8" id="dAL-Cm-NoS"/>
@@ -168,6 +175,39 @@
             </objects>
             <point key="canvasLocation" x="1110.144927536232" y="99.776785714285708"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="QXd-72-Kvy">
+            <objects>
+                <tableViewController id="bnL-18-5bd" customClass="SettingsTableViewController" customModule="TaskOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="UNq-dz-hLZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="vKA-w3-VBe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="336" id="4AQ-bL-Lw5" customClass="TableViewCell" customModule="TaskOne" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="18" width="414" height="336"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4AQ-bL-Lw5" id="u9a-OO-4Qb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="bnL-18-5bd" id="aUA-wb-dHh"/>
+                            <outlet property="delegate" destination="bnL-18-5bd" id="akq-yR-kbr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="P1P-im-SeK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JpW-HW-6Ag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895.6521739130437" y="99.776785714285708"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="yjt-cR-e5R">
             <objects>
@@ -177,6 +217,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.54636610029999999" green="0.92517081590000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -195,5 +236,8 @@
         <image name="OrionInLogo" width="900" height="900"/>
         <image name="Rectangle" width="322" height="68"/>
         <image name="sky" width="340" height="413"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

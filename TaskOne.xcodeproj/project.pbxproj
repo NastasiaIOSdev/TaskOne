@@ -14,6 +14,8 @@
 		2ECD403F26835D2E00EB4DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ECD403E26835D2E00EB4DFC /* Assets.xcassets */; };
 		2ECD404226835D2E00EB4DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ECD404026835D2E00EB4DFC /* LaunchScreen.storyboard */; };
 		2ECD404E2683623400EB4DFC /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECD404D2683623400EB4DFC /* SplashScreenViewController.swift */; };
+		2ECD40522683782300EB4DFC /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECD40512683782300EB4DFC /* SettingsTableViewController.swift */; };
+		2ECD40552683783E00EB4DFC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECD40542683783E00EB4DFC /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2ECD404126835D2E00EB4DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ECD404326835D2E00EB4DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ECD404D2683623400EB4DFC /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		2ECD40512683782300EB4DFC /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		2ECD40542683783E00EB4DFC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 			children = (
 				2ECD403926835D2900EB4DFC /* GuessViewController.swift */,
 				2ECD404D2683623400EB4DFC /* SplashScreenViewController.swift */,
+				2ECD40512683782300EB4DFC /* SettingsTableViewController.swift */,
+				2ECD40542683783E00EB4DFC /* TableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ECD403A26835D2900EB4DFC /* GuessViewController.swift in Sources */,
+				2ECD40522683782300EB4DFC /* SettingsTableViewController.swift in Sources */,
 				2ECD403626835D2900EB4DFC /* AppDelegate.swift in Sources */,
+				2ECD40552683783E00EB4DFC /* TableViewCell.swift in Sources */,
 				2ECD404E2683623400EB4DFC /* SplashScreenViewController.swift in Sources */,
 				2ECD403826835D2900EB4DFC /* SceneDelegate.swift in Sources */,
 			);
